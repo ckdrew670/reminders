@@ -8,25 +8,49 @@ class App extends Component {
             text: "",
         }
         
+        this.addReminder = this.addReminder.bind(this);
     }
 
     handleChange = (e) => {
         this.setState({ text: e.target.value})
     }
 
-    addReminder = () => {
-        
-        this.props.handleSave(this.state.text);
+    addReminder = (e) => {
+        let { text } = this.state;
+
+        e.preventDefault();
+        this.props.handleSave(text);
+
         console.log('this', this); // <-- outputs the whole object
         
     }
 
+    listReminders = () => {
+        let { reminders } = this.props;
+        return (
+            <ul className="list-group col-sm-4">
+                {
+                    reminders.map(reminder => {
+                        return (
+                            <li 
+                                key={ reminder.id }
+                                className="list-group-item"
+                            >{ reminder.text }</li>
+                        )
+                    })
+                }
+            </ul>
+        )
+    }
+
     render() {
-        console.log('this.props', this.props);
+        // console.log('this.props', this.props);
         return (
             <div className="App">
                 <h1 className="title">Reminders</h1>
-                <form className="form-inline">
+                <form 
+                    className="form-inline"
+                    onSubmit={ this.addReminder }>
                     <div className="form-group">
                         <input 
                             type="text"
@@ -35,12 +59,13 @@ class App extends Component {
                             onChange={ this.handleChange }
                         />
                     </div>
-                    <button
-                        type="button"
+                    <input
+                        type="submit"
                         className="btn btn-success"
-                        onClick={ this.addReminder }
-                    >Add</button>
+                        value="Add Reminder"
+                    />
                 </form>
+                <div>{ this.listReminders() }</div>
             </div>
         )
     }
