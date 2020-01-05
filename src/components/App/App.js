@@ -9,6 +9,7 @@ class App extends Component {
         }
         
         this.addReminder = this.addReminder.bind(this);
+       // this.deleteReminder = this.deleteReminder.bind(this);
     }
 
     handleChange = (e) => {
@@ -25,6 +26,13 @@ class App extends Component {
         
     }
 
+    deleteReminder = (id) => {
+        
+        console.log('deleting in application', id);
+        this.props.handleDelete(id);
+        
+    }
+
     listReminders = () => {
         let { reminders } = this.props;
         return (
@@ -35,7 +43,13 @@ class App extends Component {
                             <li 
                                 key={ reminder.id }
                                 className="list-group-item"
-                            >{ reminder.text }</li>
+                            >
+                                <div className="list-item">{ reminder.text }</div>
+                                <button 
+                                    className="btn delete-button"
+                                    onClick={ this.deleteReminder(reminder.id) }
+                                >&#x2715;</button>
+                            </li>
                         )
                     })
                 }

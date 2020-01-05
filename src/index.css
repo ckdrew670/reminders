@@ -4,6 +4,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 h1 {
@@ -17,5 +18,15 @@ input {
 
 ul {
     margin-top: 30px;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-button {
+    padding-left: 8px;
+    color: red;
 }
 

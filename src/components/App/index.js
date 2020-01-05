@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import App from './App';
-import { addReminder } from '../../actions/state';
+import { addReminder, deleteReminder } from '../../actions/state';
+
 
 const mapStateToProps = state => {
     return {
@@ -8,9 +9,10 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
     return {
-        handleSave: value => dispatch(addReminder(value)),
+        handleSave: (value) => dispatch(addReminder(value)),
+        handleDelete: (id) => dispatch(deleteReminder(id))
     };
 }
 
