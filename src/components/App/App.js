@@ -65,7 +65,7 @@ class App extends Component {
                         value="Add Reminder"
                     />
                 </form>
-                <div>{ this.listReminders() }</div>
+                { this.listReminders() }
             </div>
         )
     }
