@@ -7,6 +7,7 @@ class App extends Component {
         this.state = {
             text: "",
         }
+        
     }
 
     handleChange = (e) => {
@@ -14,7 +15,10 @@ class App extends Component {
     }
 
     addReminder = () => {
-        console.log('this.state', this.state);
+        
+        this.props.handleSave(this.state.text);
+        console.log('this', this); // <-- outputs the whole object
+        
     }
 
     render() {
