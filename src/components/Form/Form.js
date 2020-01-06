@@ -49,7 +49,7 @@ class Form extends Component {
             <form 
                 className="form"
                 onSubmit={ this.addReminder }>
-                
+                <label className="form-label">Enter a task:</label>
                 <input 
                     type="text"
                     className="form-control"
@@ -57,10 +57,10 @@ class Form extends Component {
                     placeholder="I have to ..."
                     onChange={ this.handleChange }
                 />
-                
+                <label className="form-label">Enter a due date:</label>
                 <input 
                     className="form-control"
-                    type="datetime-local"
+                    type="date"
                     onChange={ this.handleDueDate }
                 />
 

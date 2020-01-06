@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 class List extends Component {
 
@@ -12,34 +13,10 @@ class List extends Component {
         
     }
 
-    listReminders = () => {
-        let { reminders } = this.props;
-        return (
-            <ul className="list-group">
-                {
-                    reminders.map(reminder => {
-                        return (
-                            <li 
-                                key={ reminder.id }
-                                className="list-group-item"
-                            >
-                                <div className="list-item">{ reminder.text }</div>
-                                <div 
-                                    className="btn delete-button"
-                                    onClick={ () => this.deleteReminder(reminder.id) }
-                                >&#x2715;</div>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-        )
-    }
-
     render() {
 
         let { reminders } = this.props;
-        // console.log('this.props', this.props);
+        
         return (
             <ul className="list-group">
                 {
@@ -50,6 +27,7 @@ class List extends Component {
                                 className="list-group-item"
                             >
                                 <div className="list-item">{ reminder.text }</div>
+                                <div><em>due { moment(new Date(reminder.dueDate)).fromNow() }</em></div>
                                 <div 
                                     className="btn delete-button"
                                     onClick={ () => this.deleteReminder(reminder.id) }
