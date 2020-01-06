@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
-import App from './App';
-import { addReminder, deleteReminder } from '../../actions/state';
+import Form from './Form';
+import { addReminder } from '../../actions/state';
 
 
 const mapStateToProps = state => {
     return {
+        text: state,
         reminders: state,
     }
 }
@@ -12,8 +13,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return {
         handleSave: (value) => dispatch(addReminder(value)),
-        handleDelete: (id) => dispatch(deleteReminder(id))
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Form);
