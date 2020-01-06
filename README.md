@@ -1,3 +1,11 @@
+## Reminders App
+This is a simple to-do list app. The user input a task into the form field and on submission, the tasks are listed below. The user can then delete tasks when they have completed them.
+
+## Method
+This app was built using React/Redux. 
+Initially, it was all created in a single App component, which was then split into separate Form and List components. 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
