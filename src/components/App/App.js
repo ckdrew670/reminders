@@ -5,7 +5,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            text: "",
+            text: "Jack",
         }
         
         this.addReminder = this.addReminder.bind(this);
@@ -21,6 +21,7 @@ class App extends Component {
 
         e.preventDefault();
         this.props.handleSave(text);
+        this.setState({ text: "Jack" });
 
         console.log('this', this); // <-- outputs the whole object
         
@@ -38,7 +39,7 @@ class App extends Component {
     listReminders = () => {
         let { reminders } = this.props;
         return (
-            <ul className="list-group col-sm-4">
+            <ul className="list-group">
                 {
                     reminders.map(reminder => {
                         return (
@@ -65,9 +66,9 @@ class App extends Component {
             <div className="App">
                 <h1 className="title">Reminders</h1>
                 <form 
-                    className="form-inline"
+                    className="form"
                     onSubmit={ this.addReminder }>
-                    <div className="form-group">
+                    <div>
                         <input 
                             type="text"
                             className="form-control"
