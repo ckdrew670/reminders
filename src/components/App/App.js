@@ -47,10 +47,10 @@ class App extends Component {
                                 className="list-group-item"
                             >
                                 <div className="list-item">{ reminder.text }</div>
-                                <button 
+                                <div 
                                     className="btn delete-button"
                                     onClick={ () => this.deleteReminder(reminder.id) }
-                                >&#x2715;</button>
+                                >&#x2715;</div>
                             </li>
                         )
                     })
