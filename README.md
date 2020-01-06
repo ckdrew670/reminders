@@ -1,6 +1,6 @@
 ## Reminders App
 This is a simple to-do list app. The user input a task into the form field and on submission, the tasks are listed below. The user can then delete tasks when they have completed them. The user can also clear all tasks.
-It was built as extra React/Redux practice following the DevelopMe_ training bootcamp. 
+It was built as extra React/Redux practice following the DevelopMe_ training bootcamp using a tutorial found on YouTube that I amended in places for slightly different style and functionality.
 
 ## Site URL
 
