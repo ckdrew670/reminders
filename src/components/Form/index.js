@@ -6,13 +6,14 @@ import { addReminder } from '../../actions/state';
 const mapStateToProps = state => {
     return {
         text: state,
+        dueDate: state,
         reminders: state,
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleSave: (value) => dispatch(addReminder(value)),
+        handleSave: (text, dueDate) => dispatch(addReminder(text, dueDate)),
     };
 }
 

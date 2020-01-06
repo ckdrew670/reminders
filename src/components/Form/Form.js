@@ -6,22 +6,36 @@ class Form extends Component {
         super(props);
         this.state = {
             text: "",
+            dueDate: "",
         }
         
+        this.handleChange = this.handleChange.bind(this);
         this.addReminder = this.addReminder.bind(this);
        // this.deleteReminder = this.deleteReminder.bind(this);
     }
 
     handleChange = (e) => {
-        this.setState({ text: e.target.value})
+        this.setState({ 
+            text: e.target.value,
+            })
+    }
+
+    handleDueDate = (e) => {
+        this.setState({
+            dueDate: e.target.value,
+        })
     }
 
     addReminder = (e) => {
-        let { text } = this.state;
+        let { text, dueDate } = this.state;
 
         e.preventDefault();
-        this.props.handleSave(text);
-        this.setState({ text: " "});
+        this.props.handleSave(text, dueDate);
+        
+        this.setState({ 
+            text: "", 
+            dueDate: ""
+        });
 
         console.log('this', this); // <-- outputs the whole object
         
@@ -44,6 +58,12 @@ class Form extends Component {
                     onChange={ this.handleChange }
                 />
                 
+                <input 
+                    className="form-control"
+                    type="datetime-local"
+                    onChange={ this.handleDueDate }
+                />
+
                 <input
                     type="submit"
                     className="btn btn-success form-button"
