@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Reset from '../Reset';
 
 class Form extends Component {
 
@@ -45,7 +46,7 @@ class Form extends Component {
         let { text, dueDate } = this.state;
          
         return (
-    
+            
             <form 
                 className="form"
                 onSubmit={ this.addReminder }>
@@ -64,13 +65,16 @@ class Form extends Component {
                     value={ dueDate }
                     onChange={ this.handleDueDate }
                 />
-
-                <input
-                    type="submit"
-                    className="btn btn-success form-button"
-                    value="Add Reminder"
-                />
+                <div className="buttons">
+                    <input
+                        type="submit"
+                        className="btn btn-success form-button "
+                        value="Add Reminder"
+                    />
+                    <Reset/>
+                </div>
             </form>
+            
         )
     }
 }
