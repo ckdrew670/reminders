@@ -25,10 +25,12 @@ class App extends Component {
         console.log('this', this); // <-- outputs the whole object
         
     }
-
-    deleteReminder = (id) => {
+    
+    // this delete method has a different syntax from the above so that I can pass in the id with the onClick. It doesn't seem to work the other way?
+    deleteReminder(id) {
         
         console.log('deleting in application', id);
+        console.log('this.props', this.props);
         this.props.handleDelete(id);
         
     }
@@ -47,7 +49,7 @@ class App extends Component {
                                 <div className="list-item">{ reminder.text }</div>
                                 <button 
                                     className="btn delete-button"
-                                    onClick={ this.deleteReminder(reminder.id) }
+                                    onClick={ () => this.deleteReminder(reminder.id) }
                                 >&#x2715;</button>
                             </li>
                         )
