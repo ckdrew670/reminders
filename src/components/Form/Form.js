@@ -21,27 +21,28 @@ class Form extends Component {
 
         e.preventDefault();
         this.props.handleSave(text);
-        this.setState({ text: "" });
+        this.setState({ text: " "});
 
         console.log('this', this); // <-- outputs the whole object
         
     }
 
     render() {
-        // console.log('this.props', this.props);
+        let { text } = this.state;
+         
         return (
     
             <form 
                 className="form"
                 onSubmit={ this.addReminder }>
-                <div>
-                    <input 
-                        type="text"
-                        className="form-control"
-                        placeholder="I have to ..."
-                        onChange={ this.handleChange }
-                    />
-                </div>
+                <label className="form-label">I need to ...</label>
+                <input 
+                    type="text"
+                    className="form-control"
+                    value={ text }
+                    onChange={ this.handleChange }
+                />
+                
                 <input
                     type="submit"
                     className="btn btn-success"
