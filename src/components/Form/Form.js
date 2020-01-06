@@ -34,7 +34,7 @@ class Form extends Component {
         
         this.setState({ 
             text: "", 
-            dueDate: ""
+            dueDate: "",
         });
 
         console.log('this', this); // <-- outputs the whole object
@@ -42,7 +42,7 @@ class Form extends Component {
     }
 
     render() {
-        let { text } = this.state;
+        let { text, dueDate } = this.state;
          
         return (
     
@@ -61,6 +61,7 @@ class Form extends Component {
                 <input 
                     className="form-control"
                     type="date"
+                    value={ dueDate }
                     onChange={ this.handleDueDate }
                 />
 
