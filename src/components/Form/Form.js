@@ -35,17 +35,18 @@ class Form extends Component {
             <form 
                 className="form"
                 onSubmit={ this.addReminder }>
-                <label className="form-label">I need to ...</label>
+                
                 <input 
                     type="text"
                     className="form-control"
                     value={ text }
+                    placeholder="I have to ..."
                     onChange={ this.handleChange }
                 />
                 
                 <input
                     type="submit"
-                    className="btn btn-success"
+                    className="btn btn-success form-button"
                     value="Add Reminder"
                 />
             </form>
