@@ -19,6 +19,7 @@ class List extends Component {
         
         return (
 
+            <>
             <ul className="list-group">
                 {
                     reminders.map(reminder => {
@@ -43,6 +44,7 @@ class List extends Component {
                     })
                 }
             </ul>
+            </>
         )
     }
 }
