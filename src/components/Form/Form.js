@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Reset from '../Reset';
+import "react-datepicker/dist/react-datepicker.css";
+
 
 class Form extends Component {
 

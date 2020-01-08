@@ -15,13 +15,13 @@ body {
 }
 
 @import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
 h1 {
     color: rgb(58, 57, 54);
     padding: 10px;
-    font-size: 4em;
-    font-family: 'Overpass', sans-serif;
-    font-weight: bolder;
+    font-size: 5em;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: normal;
     
 }
 
@@ -34,31 +34,29 @@ h1 {
 
 .form-label {
     color:rgb(87, 87, 85);
-    font-family: 'Overpass', sans-serif;
-    font-size: 1.2em;
+    font-family: 'Luckiest guy', sans-serif;
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
 }
 
 .form-control {
     font-size: 1.3em;
     margin-bottom: 20px;
     padding: 10px;
+
 }
 
 .form-control:focus {
     font-size: 1.3em;
     margin-bottom: 20px;
+    padding: 10px;
 
 }
 
-.form-button {
-    width: 100%;
-    height: 6vh;
-}
 .reset {
     margin-left: 5px;
     margin-top: 10px;
-    width: 90%;
-    height: 6vh;
+
 }
 
 .buttons {

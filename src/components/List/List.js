@@ -33,7 +33,7 @@ class List extends Component {
                                 <div className="list-item">{ reminder.text }</div>
 
                                 { reminder.dueDate === "" ? null :
-                                <div><em>due { moment(new Date(reminder.dueDate)).fromNow() }</em></div> }
+                                <div><em>due { moment(new Date(reminder.dueDate)).format("ddd, Do MMM") }</em></div> }
 
                                 <div 
                                     className="btn delete-button"
