@@ -6,7 +6,7 @@ It was built as extra React/Redux practice following the DevelopMe_ training boo
 
 ## Site URL
 
-https://ckdrew670@github.io/reminders
+https://ckdrew670.github.io/reminders
 
 ## Platforms
 This app has been designed as a mobile app, due to its portable nature. It has been tested on iPhone, iPad and Mac.
