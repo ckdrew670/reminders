@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/reminders/static/css/main.82e3da15.chunk.css",
+    "main.css": "/reminders/static/css/main.ab77ae3c.chunk.css",
     "main.js": "/reminders/static/js/main.0a528a34.chunk.js",
     "main.js.map": "/reminders/static/js/main.0a528a34.chunk.js.map",
     "runtime-main.js": "/reminders/static/js/runtime-main.5e2c8b6d.js",
@@ -8,16 +8,16 @@
     "static/js/2.69fe00d8.chunk.js": "/reminders/static/js/2.69fe00d8.chunk.js",
     "static/js/2.69fe00d8.chunk.js.map": "/reminders/static/js/2.69fe00d8.chunk.js.map",
     "index.html": "/reminders/index.html",
-    "precache-manifest.c8b7935478ac5fd4a9a06da206a11592.js": "/reminders/precache-manifest.c8b7935478ac5fd4a9a06da206a11592.js",
+    "precache-manifest.f82b543f727e99a49a1d76a623e3de08.js": "/reminders/precache-manifest.f82b543f727e99a49a1d76a623e3de08.js",
     "service-worker.js": "/reminders/service-worker.js",
-    "static/css/main.82e3da15.chunk.css.map": "/reminders/static/css/main.82e3da15.chunk.css.map",
+    "static/css/main.ab77ae3c.chunk.css.map": "/reminders/static/css/main.ab77ae3c.chunk.css.map",
     "static/js/2.69fe00d8.chunk.js.LICENSE": "/reminders/static/js/2.69fe00d8.chunk.js.LICENSE",
     "static/media/index.css": "/reminders/static/media/background.b86c9801.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.5e2c8b6d.js",
     "static/js/2.69fe00d8.chunk.js",
-    "static/css/main.82e3da15.chunk.css",
+    "static/css/main.ab77ae3c.chunk.css",
     "static/js/main.0a528a34.chunk.js"
   ]
 }
